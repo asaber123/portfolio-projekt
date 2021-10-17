@@ -1,0 +1,153 @@
+// Here is my Navigation styling, header, main and footer.
+
+//Body
+body{background-color: $primary-color;}
+//Styling for header
+header{
+  nav{
+    position: fixed;
+    z-index: 10;
+    .navbar{
+      background-image: linear-gradient(0deg, rgba(15, 57, 65, 0) 0%,$primary-color 95%);      
+      width: 100%;
+      margin: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      height: 70px;
+      
+      ul {
+        display: flex;
+        flex-direction: row;
+      
+        li {
+          justify-content: space-around;
+          list-style: none;
+          display: inline-block;
+          font-family: "Bebas Neue", cursive;
+          font-size: 2em;
+          padding-top: 15px;
+          margin-left: 50px;
+          margin-right: 50px;
+          .link:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: rgb(115, 243, 211);
+            transition: width, 0.3s;
+          }
+          .link:hover::after {
+            width: 100%;
+            transition: width, 0.3s;
+          }
+          a {
+            text-decoration: none;
+            color: white;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}
+main{
+  .index{
+    height: 90vh;
+    position: relative;
+    width: 100%;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    .illustration img {
+      width: 500px;
+      margin-right: 50px;
+    }
+    .index-text {
+      width: 450px;
+      padding: 2%;
+      background-color: #aaedf0;
+      font-size: 1.2em;
+      border-radius: 15px;
+      animation: text 5s 1;
+    }
+  }
+
+
+  .about-me {
+    height: 100vh;
+    position: relative;
+
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    width: 75%;
+    margin: auto;
+    border: 1px solid;
+    box-shadow: 5px 5px 20px 20px rgba(10, 10, 10, 0.5);
+    margin-top: 100px;
+    .about {
+      background-color: rgba(101, 172, 163, 0.699);
+      padding: 10%;
+      color: white;
+      grid-column: 1/2;
+      grid-row: 1/2;
+      font-size: 1.1em;
+      .headline {
+        color: rgba(50, 40, 65, 0.945);
+        font-size: 1.8em;
+      }
+      .ingress {
+        color: rgba(50, 40, 65, 0.945);
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+    }
+    .me {
+      background-color: rgba(123, 112, 139, 0.589);
+      width: 350px;
+      grid-column: 2/3;
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      color: white;
+      padding-top: 20px;
+      font-family: Raleway, sans-serif;
+      grid-row: 1/2;
+        li{
+          margin: 10%;
+        }
+      img {
+        width: 300px;
+        margin-left: 25px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-radius: 50%;
+      }
+      .name {
+        font-size: 1.5em;
+        margin: 2px;
+      }
+      .me-content {
+        width: 100%;
+        margin-left: 0px;
+        text-align: center;
+        font-weight: 500;
+        h5{
+          font-weight: 500;
+          font-size: 1.1em;
+          line-height: 1.5;
+        }
+      }
+  }
+  }
+
+
+}

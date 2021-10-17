@@ -56,7 +56,9 @@ header {
   }
 }
 main {
+  background-color: $accent-color;
   .index {
+    background-color: $primary-color;
     height: 90vh;
     position: relative;
     width: 100%;
@@ -65,7 +67,6 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 10%;
     .illustration img {
       width: 500px;
       margin-right: 50px;
@@ -73,10 +74,31 @@ main {
     .index-text {
       width: 450px;
       padding: 2%;
-      background-color: #aaedf0;
+      color: $accent-color;
       font-size: 1.2em;
       border-radius: 15px;
       animation: text 5s 1;
+    }
+    //Shaped background
+    .custom-shape-divider-bottom-1634483903 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .custom-shape-divider-bottom-1634483903 svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 218px;
+      transform: rotateY(180deg);
+    }
+
+    .custom-shape-divider-bottom-1634483903 .shape-fill {
+      fill: #d5fcf6;
     }
   }
 
@@ -91,6 +113,7 @@ main {
     border: 1px solid;
     box-shadow: 5px 5px 20px 20px rgba(10, 10, 10, 0.5);
     margin-top: 100px;
+    margin-bottom: 200px;
     .about {
       background-color: rgba(101, 172, 163, 0.699);
       padding: 10%;
@@ -150,6 +173,7 @@ main {
   .contact {
     text-align: center;
     margin-top: 250px;
+    padding-bottom: 250px;
 
     .contact-informaion {
       background-color: rgb(101, 172, 163);
@@ -199,50 +223,49 @@ main {
     }
   }
   /* styling för sidan portfolio */
-.portfolio h1 {
-  text-align: center;
-  color: white;
-  margin-top: 80px;
-  font-size: 2em;
-}
-.portfolio{
-  margin-top: 200px;
-}
-.underline {
-  width: 180px;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 50px;
-}
-.projects {
-  width: 70%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  justify-items: center;
-  
-}
-.project {
-position: relative;
-  width: 400px;
-  margin-bottom: 60px;
-}
-.project-img{
-    opacity: 40%; 
-}
+  .portfolio h1 {
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+    font-size: 2em;
+  }
+  .portfolio {
+    margin-top: 200px;
+  }
+  .underline {
+    width: 180px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  .projects {
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+  }
+  .project {
+    position: relative;
+    width: 400px;
+    margin-bottom: 60px;
+  }
+  .project-img {
+    opacity: 40%;
+  }
 
-.project-img img {
-  width: 100%;
-  border-radius: 15px;
-}
-.project:hover .overlay{
+  .project-img img {
+    width: 100%;
+    border-radius: 15px;
+  }
+  .project:hover .overlay {
     display: none;
-}
-.project-img:hover {
-  opacity: 100%;
-}
-.overlay {
+  }
+  .project-img:hover {
+    opacity: 100%;
+  }
+  .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -254,7 +277,4 @@ position: relative;
     margin-top: 5%;
     opacity: 100%;
   }
-
-
-
 }

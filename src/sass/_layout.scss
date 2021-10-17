@@ -1,14 +1,16 @@
 // Here is my Navigation styling, header, main and footer.
 
 //Body
-body{background-color: $primary-color;}
+body {
+  background-color: $primary-color;
+}
 //Styling for header
-header{
-  nav{
+header {
+  nav {
     position: fixed;
     z-index: 10;
-    .navbar{
-      background-image: linear-gradient(0deg, rgba(15, 57, 65, 0) 0%,$primary-color 95%);      
+    .navbar {
+      background-image: linear-gradient(0deg, rgba(15, 57, 65, 0) 0%, $primary-color 95%);
       width: 100%;
       margin: auto;
       position: fixed;
@@ -17,11 +19,11 @@ header{
       display: flex;
       justify-content: center;
       height: 70px;
-      
+
       ul {
         display: flex;
         flex-direction: row;
-      
+
         li {
           justify-content: space-around;
           list-style: none;
@@ -53,12 +55,11 @@ header{
     }
   }
 }
-main{
-  .index{
+main {
+  .index {
     height: 90vh;
     position: relative;
     width: 100%;
-
 
     display: flex;
     flex-direction: row;
@@ -79,12 +80,9 @@ main{
     }
   }
 
-
   .about-me {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-
-
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
@@ -121,9 +119,9 @@ main{
       padding-top: 20px;
       font-family: Raleway, sans-serif;
       grid-row: 1/2;
-        li{
-          margin: 10%;
-        }
+      li {
+        margin: 10%;
+      }
       img {
         width: 300px;
         margin-left: 25px;
@@ -140,14 +138,72 @@ main{
         margin-left: 0px;
         text-align: center;
         font-weight: 500;
-        h5{
+        h5 {
           font-weight: 500;
           font-size: 1.1em;
           line-height: 1.5;
         }
       }
+    }
   }
+  /* Styling för kontakt sidan */
+.contact {
+  text-align: center;
+  margin-top: 250px;
+
+.contact-informaion {
+  background-color: rgb(101, 172, 163);
+  width: 600px;
+  margin: auto;
+  border-radius: 15px;
+  padding: 3%;
+  margin-top: 70px;
+  color: white;
+  margin-bottom: 70px;
+  h2 {
+    margin-bottom: 20px;
   }
+  .contact-list {
+    margin: auto;
+    padding: 5%;
+    text-align: left;
+    .contact-span {
+      text-align: left;
+      padding: 5%;
+      height: 40px;
+      margin: auto;
+      font-family: "Nunito Sans", sans-serif;
+      margin-left: 10%;
+      .contact-text {
+        height: 30px;
+        position: relative;
+        padding-left: 10px;
+        bottom: 5px;
+        font-size: 1.2em;
+      }
+      .icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10%;
+      }
+    }
+  }
+  .s-m {
+    margin: 2%;
+  }
+  .s-m img:hover {
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 1s ease-in-out 0s;
+  }
+}
+}
+
+
+
+
+
+
 
 
 }

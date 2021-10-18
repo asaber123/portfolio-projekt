@@ -1,9 +1,8 @@
 
-//font-family: 'Raleway', sans-serif;
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap');
-//font-family: 'Nunito Sans', sans-serif;
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
+$heading-font: 'Raleway', sans-serif;
+$praragraf-font: 'Nunito Sans', sans-serif;
+$navbar-links: "Bebas Neue", cursive;
 
 
 $accent-color: #D5FCF6;
@@ -97,10 +96,11 @@ $lighten-accent: lighten($accent-color, 20);
   //Generall rules for all sites
   * {
     box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
   }
   p {
     font-family: 'Nunito Sans', sans-serif;
-    line-height: 1.7;
+    line-height: 1.5;
   }
   h1,
   h2,

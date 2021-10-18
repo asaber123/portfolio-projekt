@@ -183,6 +183,10 @@ main {
           font-size: 1.1em;
           line-height: 1.5;
         }
+        a{
+          @extend %light-buttons;
+          @extend %light-links;
+        }
       }
     }
   }
@@ -200,7 +204,7 @@ main {
     padding:5%;
   }
   .courses-box{
-    width: 70%;
+    width: 60%;
     margin: auto;
     background-color: $accent-color;
     display: flex;
@@ -217,6 +221,40 @@ main {
     }
 
   }
+  //Styling Arbetslivserfarenhet
+  .work{
+    margin-bottom: 200px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    .work-experiences{
+      width: 70%;
+      margin:auto;
+      background: $primary-color;
+      border-radius: 15px;
+      color: white;
+      padding: 7%;
+      display: flex;
+      flex-direction: column;
+      .employment{
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px solid white;
+        margin-bottom: 5%;
+        padding-bottom: 2%;
+        .employment-name{
+          width: 50%;
+        }
+        .employment-description{
+          width: 50%;
+        }
+      }
+    }
+  }
+
   /* Styling för kontakt sidan */
   .contact {
     text-align: center;
@@ -224,7 +262,7 @@ main {
     padding-bottom: 250px;
 
     .contact-informaion {
-      background-color: rgb(101, 172, 163);
+      background-color:$primary-color;
       width: 600px;
       margin: auto;
       border-radius: 15px;
@@ -285,6 +323,63 @@ main {
     color: white;
     margin-top: 0;
     margin-bottom: 50px;
+  }
+  .school-projects{
+    background-color: $primary-color;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    position: relative;
+    color: white;
+    h2{
+      margin-bottom: 50px;
+    }
+        //Shaped top
+        .custom-shape-divider-top-1634559025 {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          overflow: hidden;
+          line-height: 0;
+          transform: rotate(180deg);
+      }
+      
+      .custom-shape-divider-top-1634559025 svg {
+          position: relative;
+          display: block;
+          width: calc(116% + 1.3px);
+          height: 177px;
+          transform: rotateY(180deg);
+      }
+      
+      .custom-shape-divider-top-1634559025 .shape-fill {
+          fill: #D5FCF6;
+      }
+      .custom-shape-divider-bottom-1634560417 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    
+    .custom-shape-divider-bottom-1634560417 svg {
+        position: relative;
+        display: block;
+        width: calc(116% + 1.3px);
+        height: 177px;
+        transform: rotateY(180deg);
+    }
+    
+    .custom-shape-divider-bottom-1634560417 .shape-fill {
+        fill: #D5FCF6;
+    }
   }
   .projects {
     width: 70%;

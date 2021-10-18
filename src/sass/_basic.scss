@@ -8,7 +8,7 @@
 
 $accent-color: #D5FCF6;
 $secondary-color: #5BA59A;
-$primary-color: #093136;
+$primary-color: #1E0540;
 $color: black;
 
 //color sceme functions
@@ -40,13 +40,23 @@ $lighten-accent: lighten($accent-color, 20);
 }
 
 //Selector inheritance
-%buttons {
+%light-buttons {
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 10px;
   padding-top: 10px;
   border-radius: 7px;
+  border: 1px solid $accent-color;
+  color: white;
 
+}
+
+%dark-buttons {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 7px;
 }
 %light-links {
   color: white;

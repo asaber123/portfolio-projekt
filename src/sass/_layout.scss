@@ -67,7 +67,7 @@ main {
     height: 100vh;
     position: relative;
     width: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 200px;
 
     display: flex;
     flex-direction: row;
@@ -129,7 +129,7 @@ main {
     width: 75%;
     margin: auto;
     box-shadow: 5px 5px 20px 20px rgba(10, 10, 10, 0.5);
-    margin-top: 100px;
+    margin-top: 300px;
     margin-bottom: 200px;
     color: white;
     .about {
@@ -151,21 +151,18 @@ main {
       width: 350px;
       grid-column: 2/3;
       display: flex;
-      text-align: center;
       flex-direction: column;
       color: white;
       padding-top: 20px;
-      font-family: Raleway, sans-serif;
       grid-row: 1/2;
-      li {
-        margin: 10%;
-      }
-      img {
-        width: 300px;
-        margin-left: 25px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        border-radius: 50%;
+      .profile-picture{
+        img {
+          width: 300px;
+          margin-left: 25px;
+          margin-top: 50px;
+          margin-bottom: 50px;
+          border-radius: 50%;
+        }
       }
       .name {
         font-size: 1.5em;
@@ -177,10 +174,42 @@ main {
         text-align: center;
         font-weight: 500;
         h5 {
-          font-weight: 500;
+          font-weight: bold;
           font-size: 1.1em;
           line-height: 1.5;
         }
+      .skills{
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        margin: auto;
+        .skill{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          text-align: left;
+          padding: 5%;
+          height: 40px;
+          margin: auto;
+          font-family: "Nunito Sans", sans-serif;
+          margin-left: 10%;
+          .skill-text{
+            height: 20px;
+            position: relative;
+            margin-left:10px;
+            bottom: 5px;
+            font-size: 1.2em;
+          }
+          .dot{
+            width: 20px;
+            height: 20px;
+            margin-right: 5%;
+          }
+        }
+
+      }
         a{
           @extend %light-buttons;
           @extend %light-links;

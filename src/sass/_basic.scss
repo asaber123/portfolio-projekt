@@ -115,4 +115,11 @@ $lighten-accent: lighten($accent-color, 20);
   *, ::before, ::after{
     box-sizing: border-box;
   }
+  a{
+    text-decoration: none;
+    color: $lighter-primary;
+  }
+  a:hover{
+    color: $lighter-secondary;
+  }
   

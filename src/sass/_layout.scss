@@ -369,6 +369,8 @@ main {
     position: relative;
     color: white;
     margin-top: 200px;
+
+
       h2 {
         border-bottom: 2px solid white;
         padding-bottom: 10px;
@@ -383,10 +385,15 @@ main {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto;
       justify-items: center;
+
       .project {
         position: relative;
         width: 400px;
         margin-bottom: 60px;
+        @include phone{
+          width: 200px;
+        }
+
         h3 {
           text-align: center;
           color: white;

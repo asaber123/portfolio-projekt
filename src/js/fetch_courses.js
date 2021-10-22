@@ -3,7 +3,7 @@
 //Get elements from html and creates variables
 
 //Variables to courses
-let coursesEl = document.getElementById("courses");
+let coursesEl = document.getElementById("coursesAdmin");
 let addCourseBtn = document.getElementById("addCourseBtn");
 let nameInput = document.getElementById("name");
 let descriptionInput = document.getElementById("description");
@@ -20,7 +20,7 @@ addCourseBtn.addEventListener('click', addCourse);
 //Funktion för att hämta kurser från rest-api
 function getCourses(){
     //Gör så att denna funktion körs varje gång fönstret laddas 
-    //coursesEl.innerHTML ='';
+    coursesEl.innerHTML ='';
 
     fetch('http://localhost:8080/rest-projekt/courses.php')
     .then(response => response.json())

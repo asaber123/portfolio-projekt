@@ -1,31 +1,34 @@
 //Variables to courses
-let coursesEl = document.getElementById("courses");
-let addCourseBtn = document.getElementById("addCourseBtn");
+let workExperienceEl = document.getElementById("workExperienceAdmin");
+let addCourseBtn = document.getElementById("addWorkBtn");
 let nameInput = document.getElementById("name");
+let textInput = document.getElementById("text");
 let descriptionInput = document.getElementById("description");
-let linkInput = document.getElementById("link");
+let dateInput = document.getElementById("date");
 
 
 //Händelselyssnare
-window.addEventListener('load', getCourses);
-addCourseBtn.addEventListener('click', addCourse);
+window.addEventListener('load', getWorkExperience);
+addCourseBtn.addEventListener('click', addWorkExperience);
 
 
 //Funktioner som läser in fetch anrop
 
 //Funktion för att hämta kurser från rest-api
-function getCourses(){
+function getWorkExperience(){
     //Gör så att denna funktion körs varje gång fönstret laddas 
     //coursesEl.innerHTML ='';
 
-    fetch('http://localhost:8080/rest-projekt/courses.php')
+    fetch('http://localhost:8080/rest-projekt/workplaces.php')
     .then(response => response.json())
     .then(data =>{
-        data.forEach(course => {
-            coursesEl.innerHTML += 
-            "<div class='course'><p>"+
-            "<b>Namn: </b>" + course.name + "<br>" +
-            "<b>Beskrivning: </b>" + course.description + "<br>" +
+        data.forEach(work => {
+            console.log(work);
+            workExperienceEl.innerHTML += 
+            "<div class='work-admin'><p>"+
+            "<b>Namn: </b>" + work.name + "<br>" +
+            "<b>Beskrivning/titel av jobb: </b>" + work.description + "<br>" +
+            "<b>Beskrivning-text: </b>" + work.text + "<br>" +
             "<b>Kursplan: </b><a href='" + course.link + "'>Länk till Kursplan</a><br>" +
             "<b>Id: </b>" + course.id + "<br>" +
             "</p></div> <button class='button2' id='"+ course.id +"' onClick='deleteCourse("+ course.id +")'> Radera </button> <hr>";
@@ -45,7 +48,7 @@ function deleteCourse(id){
         console.log('Error:', error);
     })
 }
-function addCourse(){
+function addWorkExperience(){
     let name= nameInput.value;
     let description= descriptionInput.value;
     let link= linkInput.value;

@@ -1,8 +1,15 @@
-// Here is my Navigation styling, header, main and footer.
+@mixin phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
 
 //Body
 .index {
   background-color: $primary-color;
+  @include phone{
+    background-color: pink;
+  }
 
   //Styling header section
   header {
@@ -67,6 +74,7 @@
   main {
     background-color: $accent-color;
 
+
     //Styling the different section of the one-page website
     //Start with styling for "index" page
     .home {
@@ -80,6 +88,7 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
+
       .circle-illustration {
         background-color: $accent-color;
         border-radius: 50%;
@@ -88,6 +97,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
         img {
           width: 300px;
         }
@@ -468,3 +478,4 @@
     }
   }
 }
+

@@ -28,3 +28,21 @@ $breakpoints:(
     @content;
   }
 }
+
+// @include phone{
+//   .index{
+//     background-color: green;
+//     main{
+//       background-color: green;
+//     }
+//   } 
+// }
+
+@include tablet {
+  main.home{
+      background-color: pink;
+  }
+  .index{
+    background-color: pink;
+  } 
+}

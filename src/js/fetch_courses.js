@@ -81,7 +81,7 @@ function getCourseById(id) {
         .then(response => response.json())
         .then(data => {
             data.forEach(course => {
-                updateCourseEL.innerHTML +=
+                updateCourseEL.innerHTML=
                     "<h2> Uppdatera Kurs </h2>" +
                     "<form> <label for='namn'>Namn</label> <br>" +
                     "<input class='text-field' type='text' name='name'id='name' value='" + course.name + "'><br>" +

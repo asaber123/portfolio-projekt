@@ -1,7 +1,7 @@
 //Calling installed packages and making variables. 
 const {src, dest, watch, series, parallel} = require('gulp');
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify-es').default;
+const uglify = require('de').default;
 const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
 // const cssmin = require('gulp-cssmin');

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Portfolio Åsa Berglund</title>
     <link rel="stylesheet" href="/css/sass.css">
 
   </head>
   <body class="index">
     <header>
       <nav>
-        <!-- Här är kod som används för "toogle-bar"/Hamburger menyn -->
+        <!-- onclick function that triggers an opening of the nav-bar from a hamburger menu -->
         <a href="#" class="toggle-button" onclick="toggleFunction()">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </a>
-
+        <!-- Nav bar -->
         <div class="navbar">
           <ul>
             <li><a href="#home" class="link">Start</a></li>
@@ -27,11 +27,11 @@
         </div>
       </nav>
     </header>
-
+    <!-- this is the start-section of the page -->
     <main>
       <section id="home" class="home">
         <div class="circle-illustration">
-          <img src="./img/asa-natural.png" alt="illustrated picture of me" />
+          <img src="./img/asa-natural.png" alt="illustrerad bild av mig" />
         </div>
         <div class="index-text">
           <h2>Hej!</h2>
@@ -41,24 +41,24 @@
             Kolla in mina arbeten.
           </p>
         </div>
-        <!-- Formad bakgrund -->
+        <!-- Shaped background -->
         <div class="custom-shape-divider-bottom-1634547113">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0
             0 1200 120" preserveAspectRatio="none">
             <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
           </svg>
         </div>
+
       </section>
       <section id="about-me" class="about-me">
         <div class="me">
           <div class="profile-picture">
-            <img src="./img/profilbild.jpg" alt="picture of me" />
+            <img src="./img/profilbild.jpg" alt="Bild på mig" />
           </div>
           <div class="me-content">
             <h4 class="name">Åsa Berglund</h4>
             <h5>Göteborg</h5>
             <br>
-            <div></div>
             <h4>Skills</h4>
             <hr class="underline">
             <div class="skills">
@@ -77,6 +77,10 @@
               <span class="skill">
                 <img src="./img/dot-white.svg" class="dot" alt="dot" />
                 <span class="skill-text"> HTML & CSS</span>
+              </span>
+              <span class="skill">
+                <img src="./img/dot-white.svg" class="dot" alt="dot" />
+                <span class="skill-text"> Node.js</span>
               </span>
             </div>
             <a href="mailto:asaberglund54@gmail.com">Ta
@@ -255,7 +259,7 @@
             <br />
             <span class="contact-span">
               <img src="./img/mail.png" class="icon" alt="mail icon" />
-              <span class="contact-text"> <a
+              <span class="contact-text"> <a class="link"
                   href="mailto:asaberglund54@gmail.com">Mail</a> </span></span><br
               />
             <br />

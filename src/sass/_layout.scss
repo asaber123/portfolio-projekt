@@ -1,3 +1,9 @@
+@mixin small-phone {
+  @media (max-width: 380px) {
+    @content;
+  }
+}
+
 @mixin phone {
   @media (max-width: 750px) {
     @content;
@@ -97,24 +103,20 @@
             margin-left: 50px;
             margin-right: 50px;
             @include tablet{
-              font-size: 2em;
+              font-size: 1.5em;
+              margin-left: 30px;
+              margin-right: 30px;
             }
             @include phone{
-              margin-left: 0;
-              margin: 6%;
+              margin-left: 20px;
+              margin-right:20px;
             }
-            //Styling for hover effect.
-            .link:after {
-              content: "";
-              display: block;
-              width: 0;
-              height: 2px;
-              background: $secondary-color;
-              transition: width, 0.3s;
+            .link{
+              @extend %hover-effect;
             }
-            .link:hover::after {
-              width: 100%;
-              transition: width, 0.3s;
+            // Styling for hover effect.
+            .link {
+              @extend %hover-effect;
             }
             a {
               text-decoration: none;
@@ -127,9 +129,6 @@
                 width: 100%;
               }
             }
-            a:hover {
-              color: $secondary-color;
-            }
           }
         }
       }
@@ -137,10 +136,21 @@
   }
   main {
     background-color: $accent-color;
+    margin:0px;
+    padding: 0px;
     @include phone{
       margin-top: 50px;
 
     }
+  section{
+    margin-top: 200px;
+    margin-bottom: 200px;
+    @include phone{
+      margin-top:150px;
+      margin-bottom: 150px;
+    }
+
+  }
 
     //Styling the different section of the one-page website
     //Start with styling for "index" page
@@ -149,16 +159,15 @@
       height: 100vh;
       position: relative;
       width: 100%;
-      margin-bottom: 200px;
+      margin-top: 0px;
 
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      @include tablet{
-        flex-direction: column;
-      }
+
       @include phone{
+        flex-direction: column;
         padding-bottom: 50px;
       }
 
@@ -170,14 +179,32 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include tablet{
+          width: 350px;
+          height: 350px;
+        }
         @include phone{
+          margin-top: 20px;
           width: 300px;
           height: 300px;
         }
+        @include small-phone{
+          width: 250px;
+          height: 250px;
+        }
+
 
         img {
           width: 300px;
-
+        @include tablet{
+          width: 230px;
+        }
+        @include phone{
+          width: 220px;
+        }
+        @include small-phone{
+          width: 180px;
+        }
         }
       }
       .index-text {
@@ -188,11 +215,20 @@
         font-size: 1.2em;
         border-radius: 15px;
         animation: text 5s 1;
+        @include tablet{
+          font-size: 1.1em;
+        }
         @include phone{
-          width: 95%;
           padding: 5%;
           font-size: 1em;
+          width: 70%;
+          margin: auto;
         }
+        @include small-phone{
+          width: 85%;
+          margin-top: 0px;
+        }
+
       }
       //Shaped background from shapedivider.app
       .custom-shape-divider-bottom-1634547113 {
@@ -229,8 +265,6 @@
       width: 75%;
       margin: auto;
       box-shadow: 5px 5px 20px 20px rgba(10, 10, 10, 0.5);
-      margin-top: 300px;
-      margin-bottom: 200px;
       color: white;
       @include tablet{
         width: 90%;
@@ -238,8 +272,10 @@
       @include phone{
         display: block;
         margin-top: 70px;
-        width: 100%;
         margin-top: 0px;
+      }
+      @include small-phone{
+        width: 100%;
       }
       .about {
         background-color: $secondary-color;
@@ -267,21 +303,31 @@
         color: white;
         padding-top: 20px;
         grid-row: 1/2;
+        padding-bottom: 10%;
+
         @include phone{
           padding-top: 20px;
           padding-bottom: 20px;
           justify-content: center;
+          width: 100%;
         }
-        @include phone{
+        @include small-phone{
           width: 100%;
         }
         .profile-picture {
+          text-align: center;
           img {
             width: 300px;
             margin-left: 25px;
             margin-top: 50px;
             margin-bottom: 50px;
             border-radius: 50%;
+            @include small-phone{
+              width: 90%;
+              margin: auto;
+              margin-bottom: 50px;
+
+            }
           }
         }
         .name {
@@ -294,18 +340,28 @@
           text-align: center;
           font-weight: 500;
 
+          h4{
+            font-size: 1.6em;
+          }
+
           h5 {
             font-weight: bold;
             font-size: 1.1em;
-            line-height: 1.5;
+            line-height: 1.4;
           }
           .skills {
             padding-bottom: 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 70%;
+            width: 80%;
             margin: auto;
+            @include phone{
+              width: 80%;
+              flex-direction: row;
+              flex-wrap: wrap;
+              padding-top: 20px;
+            }
             .skill {
               display: flex;
               flex-direction: row;
@@ -316,6 +372,11 @@
               margin: auto;
               font-family: "Nunito Sans", sans-serif;
               margin-left: 10%;
+              margin-bottom: 10px;
+              margin-top: 10px;
+              @include phone{
+                width: 40%;
+              }
               .skill-text {
                 height: 20px;
                 position: relative;
@@ -341,8 +402,7 @@
 
     //Styling couse-page. Here an rest-api is going to make the content of the section
     .courses {
-      margin-top: 200px;
-      margin-bottom: 200px;
+
 
       display: flex;
       justify-content: center;
@@ -359,6 +419,7 @@
         border-bottom: 2px solid white;
         padding-bottom: 10px;
         margin-bottom: 50px;
+        
       }
       .courses-box {
         width: 70%;
@@ -394,8 +455,6 @@
 
     //Styling work-experience section. This section contains data from rest-api
     .work {
-      margin-bottom: 200px;
-      margin-top: 200px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -407,6 +466,14 @@
         border-bottom: 2px solid $primary-color;
         padding-bottom: 10px;
         margin-bottom: 50px;
+        @include small-phone{
+          text-align: center;
+          font-size: 1.5em;
+          width: 80%;
+          margin: auto;
+          margin-bottom: 50px;
+
+        }
       }
 
       .work-experiences {
@@ -456,7 +523,7 @@
     /* Styling för kontakt sidan */
     .contact {
       text-align: center;
-      margin-top: 250px;
+      margin-bottom: 0px;
       padding-bottom: 250px;
 
       .contact-informaion {
@@ -501,6 +568,9 @@
               padding-left: 10px;
               bottom: 5px;
               font-size: 1.2em;
+              a {          
+                @extend %light-links;
+              }
             }
             .icon {
               width: 30px;
@@ -512,10 +582,8 @@
         .s-m {
           margin: 2%;
         }
-        .s-m img:hover {
-          cursor: default;
-          transform: rotate(360deg);
-          transition: all 1s ease-in-out 0s;
+        .s-m img {
+          @extend %rotation-effect;
         }
       }
     }
@@ -532,7 +600,15 @@
       padding-bottom: 200px;
       position: relative;
       color: white;
-      margin-top: 200px;
+      margin-bottom: 0px;
+      @include phone{
+        .custom-shape-divider-top-1634559025{
+          display: none;
+        }
+        .custom-shape-divider-bottom-1634560417{
+          display: none;
+        }
+      }
 
       h2 {
         border-bottom: 2px solid white;

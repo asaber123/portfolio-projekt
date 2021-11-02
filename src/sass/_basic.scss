@@ -20,12 +20,6 @@ $lighter-secondary:lighten($secondary-color, 20);
 $darken-accent: darken($accent-color, 20);
 $lighten-accent: lighten($accent-color, 20);
 
-// Sass Functions
-@function lighter($color){
-    $result:lighter($color, 10%);
-    @return $result;
-}
-
 
 // Sass Mixins
 @mixin heading-underline($with) {
@@ -47,7 +41,9 @@ $lighten-accent: lighten($accent-color, 20);
   border-radius: 7px;
   border: 1px solid $accent-color;
   color: white;
-
+}
+%light-buttons:hover{
+  background-color: $lighter-primary;
 }
 
 %dark-buttons {
@@ -61,42 +57,40 @@ $lighten-accent: lighten($accent-color, 20);
   color: white;
   text-decoration: none;
 }
+%light-links:hover{
+  color: $darken-accent
+}
 
-//Using else/if satement to change color theme from light to dark
-@mixin text($warning: true) {
-    @if $warning {
-      background-color: red;
-      color: yellow;
-      font-weight: bold;
-      padding: 5%;
-      width: 80%;
-      margin: auto;
-      text-align: center;
-      border-radius: 15px;
-      line-height: 1.5;
-      margin-top: 10%;
-      margin-bottom: 10%;
-
-    } @else {
-      background-color: rgb(23, 122, 23);
-      font-weight: bold;
-      padding: 5%;
-      width: 80%;
-      color: black;
-      text-align: center;
-      border-radius: 15px;
-      margin-top: 15%;
-      margin-bottom: 10%;
-      margin: auto;
-      line-height: 1.5;
-
-    }
-  }
+%hover-effect:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: $darken-accent;
+  transition: width, 0.3s;
+}
+%hover-effect:hover::after {
+  width: 100%;
+  transition: width, 0.3s;
+}
+%rotation-effect:hover{
+  cursor: default;
+  transform: rotate(360deg);
+  transition: all 1s ease-in-out 0s;
+}
 
   //Generall rules for all sites
   * {
     box-sizing: border-box;
     font-family: 'Nunito Sans', sans-serif;
+  }
+  html{
+    margin:0px;
+    padding: 0px;
+  }
+  body{
+    margin:0px;
+    padding: 0px;
   }
   p {
     font-family: 'Nunito Sans', sans-serif;
@@ -115,11 +109,5 @@ $lighten-accent: lighten($accent-color, 20);
   *, ::before, ::after{
     box-sizing: border-box;
   }
-  a{
-    text-decoration: none;
-    color: $lighter-primary;
-  }
-  a:hover{
-    color: $lighter-secondary;
-  }
+
   

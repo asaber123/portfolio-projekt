@@ -16,7 +16,7 @@ function getCourses() {
     //Gör så att denna funktion körs varje gång fönstret laddas 
     coursesboxEl.innerHTML = '';
 
-    fetch('http://localhost:8080/rest-projekt/courses.php')
+    fetch('http://asaberglund.se/rest-projekt/courses.php')
         .then(response => response.json())
         .then(data => {
             data.forEach(course => {
@@ -24,7 +24,7 @@ function getCourses() {
                 coursesboxEl.innerHTML +=
                     "<div id='course'>" +
                     "<h3>" + course.name + "</h3>" +
-                    "<b>DATUM</b> <br>" +
+                    "<b> "+ course.university +" </b>" +
                     "<a href='" + course.link + "'> Kurslänk </a> <br>" +
                     "<p>" + course.description + "</p></div>";
             })
@@ -34,7 +34,7 @@ function getWorkExperience() {
     //Gör så att denna funktion körs varje gång fönstret laddas 
     employmentEL.innerHTML = '';
 
-    fetch('http://localhost:8080/rest-projekt/workplaces.php')
+    fetch('http://asaberglund.se/rest-projekt/workplaces.php')
         .then(response => response.json())
         .then(data => {
             data.forEach(work => {
@@ -55,7 +55,7 @@ function getProjects() {
     //Gör så att denna funktion körs varje gång fönstret laddas 
     projectsEL.innerHTML = '';
 
-    fetch('http://localhost:8080/rest-projekt/projects.php')
+    fetch('http://asaberglund.se/rest-projekt/projects.php')
         .then(response => response.json())
         .then(data => {
             data.forEach(project => {

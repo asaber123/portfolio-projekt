@@ -143,8 +143,8 @@
 
     }
   section{
-    margin-top: 200px;
-    margin-bottom: 200px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     @include phone{
       margin-top:150px;
       margin-bottom: 150px;
@@ -635,6 +635,7 @@
           position: relative;
           width: 400px;
           margin-bottom: 60px;
+          border-radius: 15px;
           @include tablet{
             width: 300px;
             margin-bottom: 40px;
@@ -645,28 +646,26 @@
           }
 
           h3 {
-            text-align: center;
-            color: white;
-            font-size: 2em;
+            font-size: 2.5em;
+            line-height: 0.2em;
           }
         }
       }
     }
 
-    .project-img {
-      opacity: 40%;
+    .project-box {
+      opacity: 20%;
+      border-radius: 15px;
     }
 
-    .project-img img {
+    .project-box .color-div {
+      background-color: pink;
       width: 100%;
       border-radius: 15px;
 
     }
     .project:hover .overlay {
       display: none;
-    }
-    .project-img:hover {
-      opacity: 100%;
     }
     .overlay {
       position: absolute;
@@ -678,9 +677,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
+      opacity: 100%;
+      text-align: center;
+      color: white;
+      flex-direction: column;
+      b{
+        font-size: 1.5em;
+      }
+    }
+    .project-box:hover {
       opacity: 100%;
     }
+
     //Shaped top
     .custom-shape-divider-top-1634559025 {
       position: absolute;

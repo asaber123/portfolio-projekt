@@ -63,9 +63,8 @@ function getProjects() {
                 projectsEL.innerHTML +=
                     "<div class='project'>" +
                     "<a href='" + project.link + "'>" +
-                    "<div class='project-img'>" +
-                    "<img src='./img/impact.jpg' alt='Php project - make an impact'> </div>" +
-                    "<div class='overlay'> <h3>" + project.name + "<br>" + project.description + "</h3> </div> </a> </div>"
+                    "<iframe class='project-box' src='" + project.link + "' height='300' width='400' title='" + project.name + "'></iframe>" +
+                    "<div class='overlay'> <h3>" + project.name + "</h3><b>" + project.description + " </b></div> </a> </div>"
 
             })
         })

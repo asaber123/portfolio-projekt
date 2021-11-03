@@ -620,14 +620,15 @@ body {
       }
 
       .projects {
-        width: 70%;
+        width: 80%;
         margin: auto;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-evenly;
         @include tablet{
           width: 90%;
+          justify-content: center;
         }
         @include phone{
           display: flex;
@@ -639,7 +640,6 @@ body {
           width: 300px;
           margin-bottom: 60px;
           border-radius: 15px;
-          margin: 2%;
           @include tablet{
             margin-bottom: 40px;
           }

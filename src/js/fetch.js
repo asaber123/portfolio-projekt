@@ -33,7 +33,7 @@ function getWorkExperience() {
     //Everytime the window reloads, the previous loadded content is removed and new data is set in. 
     employmentEL.innerHTML = '';
 
-    fetch('http://localhost/rest-projekt/workplaces.php')
+    fetch('http://asaberglund.se/rest-projekt/workplaces.php/')
         .then(response => response.json())
         .then(data => {
             data.forEach(work => {
@@ -56,7 +56,7 @@ function getProjects() {
     //Everytime the window reloads, the previous loadded content is removed and new data is set in. 
     projectsEL.innerHTML = '';
 
-    fetch('http://localhost/rest-projekt/projects.php')
+    fetch('http://asaberglund.se/rest-projekt/projects.php/')
         .then(response => response.json())
         .then(data => {
             data.forEach(project => {

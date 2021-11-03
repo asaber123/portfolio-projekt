@@ -142,11 +142,11 @@ body {
 
     }
   section{
-    padding-top: 200px;
-    padding-bottom: 200px;
-    @include phone{
-      margin-top:150px;
-      margin-bottom: 150px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    @include tablet{
+      margin-top:100px;
+      margin-bottom: 100px;
     }
 
   }
@@ -179,17 +179,17 @@ body {
         justify-content: center;
         align-items: center;
         @include tablet{
-          width: 350px;
-          height: 350px;
+          width: 320px;
+          height: 320px;
         }
         @include phone{
           margin-top: 20px;
-          width: 300px;
-          height: 300px;
+          width: 290px;
+          height: 290px;
         }
         @include small-phone{
-          width: 250px;
-          height: 250px;
+          width: 300px;
+          height: 300px;
         }
 
 
@@ -378,6 +378,9 @@ body {
               margin-top: 10px;
               @include phone{
                 width: 40%;
+              }
+              @include small-phone{
+                width: 80%;
               }
               .skill-text {
                 height: 20px;
@@ -619,36 +622,28 @@ body {
       .projects {
         width: 70%;
         margin: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        justify-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         @include tablet{
           width: 90%;
         }
         @include phone{
           display: flex;
-          flex-direction: column;
           justify-content: center;
+
         }
         .project {
           position: relative;
-          width: 400px;
+          width: 300px;
           margin-bottom: 60px;
           border-radius: 15px;
+          margin: 2%;
           @include tablet{
-            width: 300px;
             margin-bottom: 40px;
           }
-          @include phone{
-            width: 100%;
 
-          }
-
-          h3 {
-            font-size: 2em;
-            line-height: 0.2em;
-          }
         }
       }
     }
@@ -658,12 +653,6 @@ body {
       border-radius: 15px;
     }
 
-    .project-box .color-div {
-      background-color: pink;
-      width: 100%;
-      border-radius: 15px;
-
-    }
     .project:hover .overlay {
       opacity: 0%;
     }
@@ -684,8 +673,12 @@ body {
       text-align: center;
       color: white;
       flex-direction: column;
-      b{
+      font-size: 1.2em;
+      padding: 2%;
+      
+      h3{
         font-size: 1.5em;
+
       }
     }
     .project-box:hover {

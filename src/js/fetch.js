@@ -63,7 +63,7 @@ function getProjects() {
                 //Types our the data in the element with id projects in the html. 
                 projectsEL.innerHTML +=
                     "<div class='project'>" +
-                    "<iframe class='project-box' src='" + project.link + "' height='300' width='400' title='" + project.name + "'></iframe>" +
+                    "<iframe class='project-box' src='" + project.link + "' height='250' width='300' title='" + project.name + "'></iframe>" +
                     "<a href='" + project.link + "'>" +
                     "<div class='overlay'> <h3>" + project.name + "</h3><b>" + project.description + " </b></div> </a> </div>"
 

@@ -16,8 +16,8 @@
 }
 
 //Body
-.index {
-  background-color: $primary-color;
+body {
+  background-color: $accent-color;
 
   //Styling header section
   header {
@@ -135,7 +135,6 @@
     }
   }
   main {
-    background-color: $accent-color;
     margin:0px;
     padding: 0px;
     @include phone{
@@ -227,6 +226,9 @@
         @include small-phone{
           width: 85%;
           margin-top: 0px;
+        }
+        a{
+          @extend %light-links;
         }
 
       }
@@ -733,5 +735,14 @@
       fill: #d5fcf6;
     }
   }
+footer{
+  background-color: $primary-color;
+  text-align: center;
+  color: white;
+  p{
+    margin: 0px;
+    padding: 1%;
+  }
+}
 }
 

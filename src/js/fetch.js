@@ -5,22 +5,21 @@ const coursesboxEl = document.getElementById("coursesBox");
 const employmentEL = document.getElementById("employment");
 const projectsEL = document.getElementById("projects");
 
-//Eventlisteners
+//Eventlisteners that starts running functions on an event
 window.addEventListener('load', getCourses);
 window.addEventListener('load', getWorkExperience);
 window.addEventListener('load', getProjects);
 
-//Funktion för att hämta kurser från rest-api
+//Functions to get courses from the rest-api
 function getCourses() {
-    console.log("hejhej")
-    //Gör så att denna funktion körs varje gång fönstret laddas 
+    //Everytime the window reloads, the previous loadded content is removed and new data is set in. 
     coursesboxEl.innerHTML = '';
 
     fetch('http://asaberglund.se/rest-projekt/courses.php')
         .then(response => response.json())
         .then(data => {
             data.forEach(course => {
-                console.log(course);
+                //Types our the data in the element with id courses-box in the html. 
                 coursesboxEl.innerHTML +=
                     "<div id='course'>" +
                     "<h3>" + course.name + "</h3>" +
@@ -31,14 +30,14 @@ function getCourses() {
         })
 }
 function getWorkExperience() {
-    //Gör så att denna funktion körs varje gång fönstret laddas 
+    //Everytime the window reloads, the previous loadded content is removed and new data is set in. 
     employmentEL.innerHTML = '';
 
     fetch('http://asaberglund.se/rest-projekt/workplaces.php')
         .then(response => response.json())
         .then(data => {
             data.forEach(work => {
-                console.log(work);
+                //Types our the data in the element with id employment in the html. 
                 employmentEL.innerHTML +=
                     "<div class='employment-name'>" +
                     "<h3>" + work.name + "</h3>" +
@@ -52,14 +51,14 @@ function getWorkExperience() {
 }
 function getProjects() {
 
-    //Gör så att denna funktion körs varje gång fönstret laddas 
+    //Everytime the window reloads, the previous loadded content is removed and new data is set in. 
     projectsEL.innerHTML = '';
 
     fetch('http://asaberglund.se/rest-projekt/projects.php')
         .then(response => response.json())
         .then(data => {
             data.forEach(project => {
-                console.log(project);
+                //Types our the data in the element with id projects in the html. 
                 projectsEL.innerHTML +=
                     "<div class='project'>" +
                     "<a href='" + project.link + "'>" +

@@ -22,10 +22,11 @@ $lighten-accent: lighten($accent-color, 20);
 
 
 // Sass Mixins
-@mixin heading-underline($with) {
-  border-bottom: 1px solid rgb(0, 0, 0);
-  width: $with;
-  margin: auto;
+@mixin heading-underline($color) {
+  color: $color;
+  border-bottom: 2px solid $color;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
   text-align: center;
   font-size: 1.5em;
   font-weight: bold;
@@ -46,13 +47,6 @@ $lighten-accent: lighten($accent-color, 20);
   background-color: $lighter-primary;
 }
 
-%dark-buttons {
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  border-radius: 7px;
-}
 %light-links {
   color: white;
   text-decoration: none;
@@ -82,7 +76,7 @@ $lighten-accent: lighten($accent-color, 20);
   //Generall rules for all sites
   * {
     box-sizing: border-box;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: $praragraf-font;
   }
   html{
     margin:0px;
@@ -93,7 +87,7 @@ $lighten-accent: lighten($accent-color, 20);
     padding: 0px;
   }
   p {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: $praragraf-font;
     line-height: 1.5;
   }
   h1,
@@ -102,7 +96,7 @@ $lighten-accent: lighten($accent-color, 20);
   h4,
   h5,
   h6 {
-    font-family: 'Raleway', sans-serif;
+    font-family: $heading-font;
     font-weight: bold;
   }
 

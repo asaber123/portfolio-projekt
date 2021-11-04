@@ -588,6 +588,7 @@ body {
         }
         .s-m img {
           @extend %rotation-effect;
+          width: 40px;
         }
       }
     }

@@ -15,7 +15,7 @@ function getCourses() {
     //Everytime the window reloads, the previous loadded content is removed and new data is set in. 
     coursesboxEl.innerHTML = '';
 
-    fetch('http://localhost/rest-projekt/courses.php')
+    fetch('http://asaberglund.se/rest-projekt/courses.php')
         .then(response => response.json())
         .then(data => {
             data.forEach(course => {
